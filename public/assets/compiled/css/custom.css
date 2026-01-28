@@ -1,0 +1,353 @@
+/* =====================================================
+   🌿 Modern White + Green Admin Theme (Final Version)
+   ===================================================== */
+
+/* ========== SIDEBAR ========== */
+.sidebar-wrapper {
+    background-color: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-menu .sidebar-title {
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.sidebar-menu .sidebar-item .sidebar-link {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu .sidebar-item .sidebar-link:hover {
+    background-color: #e9f5f3;
+    color: #22ca3e;
+}
+
+.sidebar-menu .sidebar-item.activ .sidebar-link {
+    background-color: #22ca3e;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Submenu ===== */
+.sidebar-menu .submenu .submenu-item .submenu-link {
+    padding: 0.5rem 1rem;
+    color: #495057;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu .submenu .submenu-item .submenu-link:hover {
+    background-color: #e9f5f3;
+    color: #22ca3e;
+}
+
+.sidebar-menu .submenu .submenu-item.activ .submenu-link {
+    background-color: #22ca3e;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Hilangkan fokus/klik default biru */
+.sidebar-menu .submenu .submenu-item .submenu-link:focus,
+.sidebar-menu .submenu .submenu-item .submenu-link:active,
+.sidebar-menu .submenu .submenu-item .submenu-link:visited {
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+}
+
+/* ========== PROFILE CARD ========== */
+.modern-profile {
+    background-color: #ffffff10;
+    border-radius: 12px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.profile-img-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #22ca3e;
+    transition: all 0.3s;
+}
+
+.profile-img-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0;
+}
+
+.profile-role {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #22ca3e;
+    background-color: rgba(34, 202, 62, 0.15);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+/* ========== ANALYTICS CARD ========== */
+.analytics-card {
+    background: linear-gradient(135deg, #22ca3e 0%, #045301 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.analytics-card h6 {
+    font-weight: 600;
+}
+
+.analytics-card small {
+    display: block;
+    opacity: 0.9;
+}
+
+.analytics-card img {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* ========== MODERN TABLE ========== */
+.modern-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+.modern-table thead tr {
+    background-color: #fff;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.modern-table th,
+.modern-table td {
+    border: none;
+    padding: 14px 18px;
+    vertical-align: middle;
+}
+
+.modern-table tbody tr {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease-in-out;
+}
+
+.modern-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Soft backgrounds */
+.bg-soft-success {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-soft-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* ========== BUTTONS ========== */
+.btn-light-primary {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-light-primary:hover {
+    background-color: rgba(13, 110, 253, 0.2);
+}
+
+.btn-light-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-light-danger:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+/* ========== MODERN INPUT ========== */
+.modern-input {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    padding: 10px 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.modern-input:focus {
+    border-color: #22ca3e;
+    box-shadow: 0 0 0 0.2rem rgba(34, 202, 62, 0.15);
+}
+
+/* ========== MODAL ========== */
+.modal-content {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== TABS ========== */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+    padding: 0.5rem;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    color: #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.nav-tabs .nav-link.active {
+    background: #22ca3e;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.nav-tabs .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 20%;
+    width: 60%;
+    height: 4px;
+    border-radius: 2px;
+    background: #22ca3e;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active i {
+    color: #fff;
+}
+
+.tab-content .tab-pane {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== GENERAL ========== */
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 128, 0, 0.2);
+}
+
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ========== TABLE FIX ========== */
+th {
+    white-space: nowrap;
+}
+
+/* ========== GLOBAL COLORS ========== */
+body {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+.navbar {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+/* Teks dan elemen abu tua agar lebih kontras */
+.text-muted,
+.sidebar-menu .submenu .submenu-item .submenu-link,
+.modern-table thead tr {
+    color: #333333 !important;
+}
+
+.card .fw-semibold.fs-6.text-truncate,
+#transaksi-penjualan .card .fw-bold.fs-6 {
+    color: #2b2b2b;
+}
+
+/* Judul hijau khas */
+#transaksi-obat h6 {
+    color: #22ca3e;
+    font-weight: 600;
+}
