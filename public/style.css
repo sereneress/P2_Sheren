@@ -1,0 +1,210 @@
+/* =====================
+   RESET & GLOBAL
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f1, #e6ebe9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+}
+
+/* =====================
+   LAYOUT CONTAINER
+===================== */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  /* height: 85vh;                  */
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* =====================
+   CARD (FORM & PREVIEW)
+===================== */
+.form-section,
+.preview-section {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  flex: 1;                      
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   FORM SECTION
+===================== */
+.form-section h2 {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* =====================
+   STEP / GROUP
+===================== */
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   LABEL & INPUT
+===================== */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #fafafa;
+  transition: .25s ease;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #9db8b0;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(157,184,176,.35);
+}
+
+/* =====================
+   ACTION BUTTONS
+===================== */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;            
+}
+
+.actions button {
+  flex: 1;                      
+  height: 48px;                 
+}
+
+/* =====================
+   BUTTON STYLE
+===================== */
+button {
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+button.primary {
+  background: #9db8b0;
+  color: #ffffff;
+}
+
+button.primary:hover {
+  background: #8aa9a0;
+}
+
+button:not(.primary) {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+button:not(.primary):hover {
+  background: #d1d5db;
+}
+
+button:disabled {
+  background: #c7cdd2;
+  cursor: not-allowed;
+}
+
+/* =====================
+   PREVIEW SECTION
+===================== */
+.preview-section {
+  font-family: Calibri, Arial, sans-serif;
+}
+
+.preview-section h2 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+
+.preview-box {
+  flex: 1;       
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.preview-kota-tanggal {
+  text-align: right;
+  margin-bottom: 28px;
+}
+
+.preview-subject {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.preview-paragraph {
+  text-align: justify;
+  margin-bottom: 18px;
+}
+
+.preview-penutup {
+  margin-top: 28px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    /* height: auto; */
+  }
+}
+
+/* =====================
+   PRINT
+===================== */
+@media print {
+  body {
+    background: white;
+  }
+
+  .form-section {
+    display: none;
+  }
+
+  .preview-section {
+    box-shadow: none;
+    padding: 0;
+  }
+}
