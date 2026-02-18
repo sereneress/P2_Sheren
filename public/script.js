@@ -22,6 +22,7 @@ function updatePreview() {
       ${fields.kt.value || 'City, Date'}
     </div>
     <p><strong>Subject: </strong> ${fields.sa.value || ''}</p> 
+    <br>
     <div class="preview-paragraph">
       ${nl2br(fields.paragraph1.value || 
         'sheren alivia pembukaa slebew')}
@@ -34,6 +35,7 @@ function updatePreview() {
       ${nl2br(fields.paragraph3.value || 
         'anciss ini isi dari paragraph ketiga slebew')}
     </div>
+    <br>
     <div class="preview-penutup">
       ${nl2br(fields.sincelery.value || 'Sincerely,')}<br><br>
       <strong>${fields.nama.value || 'Your Name'}</strong>

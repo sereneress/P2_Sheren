@@ -195,16 +195,35 @@ button:disabled {
    PRINT
 ===================== */
 @media print {
+
+  @page {
+    size: A4;
+    margin: 2.5cm 2.5cm 2.5cm 2.5cm; /* margin standar surat */
+  }
+
   body {
+    margin: 0;
+    padding: 0;
     background: white;
   }
 
+  /* Sembunyikan form */
   .form-section {
-    display: none;
+    display: none !important;
   }
 
+  /* Preview full halaman */
   .preview-section {
     box-shadow: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
   }
+
+  .preview-box {
+    font-size: 12pt;      /* ukuran Word */
+    line-height: 1.6;
+  }
+
 }
