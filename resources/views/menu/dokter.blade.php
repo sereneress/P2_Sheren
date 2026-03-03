@@ -158,7 +158,12 @@
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary d-grid my-2">
+                                        <i class="mdi mdi-logout me-2"></i> Logout
+                                    </button>
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -182,107 +187,49 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        @php
-                        $role = strtolower(auth()->user()->role);
-                        @endphp
-
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Menu
                             </li>
-
-                            {{-- Dashboard (Semua Role) --}}
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" aria-expanded="false" data-target="#submenu-1"
+                                    aria-controls="submenu-1"><i class="fas fa-f fa-folder"></i>Dashboard</a>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('dashboard') }}">
-                                    <i class="fas fa-folder"></i> Dashboard
-                                </a>
+                                <a class="nav-link" href="{{ route('Dokter.dokter') }}"><i
+                                        class="fa fa-fw fa-user-circle"></i> Dokter</a>
                             </li>
-
-                            {{-- ================= ADMIN ONLY ================= --}}
-                            @if($role === 'admin')
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Dokter.dokter') }}">
-                                    <i class="fa fa-fw fa-user-circle"></i> Dokter
-                                </a>
+                                <a class="nav-link" href="{{ route('Farmasi.farmasi') }}"><i
+                                        class="fa fa-fw fa-user-circle"></i> Apoteker</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Farmasi.farmasi') }}">
-                                    <i class="fa fa-fw fa-user-circle"></i> Apoteker
-                                </a>
+                                <a class="nav-link" href="{{ route('Pasien.pasien') }}"><i
+                                        class="fas fa-address-card"></i>Pasien</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Poli.poli') }}">
-                                    <i class="fas fa-heartbeat"></i> Poli
-                                </a>
+                                <a class="nav-link" href="{{ route('Antrian.antrian') }}"><i
+                                        class=" fas fa-angle-double-right"></i>Antrian</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Obat.obat') }}">
-                                    <i class="fas fa-file-medical-alt"></i> Obat
-                                </a>
+                                <a class="nav-link" href="{{ route('Poli.poli') }}"><i
+                                        class=" fas fa-heartbeat"></i>Poli</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Rumah.rumah') }}">
-                                    <i class="fas fa-hospital"></i> Rumah Sakit
-                                </a>
+                                <a class="nav-link" href="{{ route('Obat.obat') }}"><i
+                                        class="fas fa-file-medical-alt"></i>Obat</a>
                             </li>
-
-                            @endif
-
-
-                            {{-- ================= ADMIN & DOKTER ================= --}}
-                            @if(in_array($role, ['admin','dokter']))
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Pasien.pasien') }}">
-                                    <i class="fas fa-address-card"></i> Pasien
-                                </a>
+                                <a class="nav-link" href="{{ route('Rumah.rumah') }}"><i
+                                        class=" fas fa-hospital"></i>Rumah Sakit</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Antrian.antrian') }}">
-                                    <i class="fas fa-angle-double-right"></i> Antrian
-                                </a>
+                                <a class="nav-link" href="{{ route('Klinik.klinik') }}"><i
+                                        class=" fas fa-hands"></i>Farmasi</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Obat.obat') }}">
-                                    <i class="fas fa-file-medical-alt"></i> Obat
-                                </a>
+                                <a class="nav-link" href="{{ route('Riwayat.riwayat') }}"><i
+                                        class=" fas fa-hands"></i>Riwayat</a>
                             </li>
-
-                            @endif
-
-
-                            {{-- ================= FARMASI ONLY ================= --}}
-                            @if($role === 'farmasi')
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Klinik.klinik') }}">
-                                    <i class="fas fa-hands"></i> Ambil Obat
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Obat.obat') }}">
-                                    <i class="fas fa-file-medical-alt"></i> Stok Obat
-                                </a>
-                            </li>
-
-                            @endif
-
-
-                            {{-- ================= SEMUA ROLE ================= --}}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('Riwayat.riwayat') }}">
-                                    <i class="fas fa-history"></i> Riwayat
-                                </a>
-                            </li>
-
                         </ul>
                     </div>
                 </nav>
