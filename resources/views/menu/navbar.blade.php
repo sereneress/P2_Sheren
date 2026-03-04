@@ -158,7 +158,12 @@
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary d-grid my-2">
+                                        <i class="mdi mdi-logout me-2"></i> Logout
+                                    </button>
+                                </form>
                             </div>
                         </li>
                     </ul>

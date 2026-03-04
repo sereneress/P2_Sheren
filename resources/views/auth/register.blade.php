@@ -44,7 +44,7 @@
                         <input class="form-control form-control-lg"
                             type="name"
                             name="name"
-                            placeholder="name"
+                            placeholder="Name"
                             value="{{ old('name') }}"
                             required>
 
@@ -112,8 +112,8 @@
 
             <div class="card-footer bg-white p-0">
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a href="{{ route('register') }}" class="footer-link">
-                        Create An Account
+                    <a href="{{ route('login') }}" class="footer-link">
+                        Already have an account? Sign In
                     </a>
                 </div>
 
